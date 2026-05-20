@@ -1,0 +1,115 @@
+*   TIMESTAMP=00000000000000                                                    
+*   IDENTIFICAO DO MAPA                                                         
+         PRINT ON,NOGEN                                                         
+MAPS007  DFHMSD TYPE=MAP,LANG=COBOL,MODE=INOUT,STORAGE=AUTO,SUFFIX=     00000020
+MAPS007  DFHMDI SIZE=(24,80),MAPATTS=(COLOR,HILIGHT),COLUMN=1,LINE=1,  *00000030
+               DATA=FIELD,TIOAPFX=YES,OBFMT=NO                          00000040
+*   CABECALHO DO MAPA                                                           
+CICS     DFHMDF POS=(1,1),LENGTH=8,COLOR=GREEN,HILIGHT=UNDERLINE,      *        
+               ATTRB=(PROT,FSET),INITIAL='CIC5A01 '                             
+         DFHMDF POS=(1,29),LENGTH=30,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='SISTEMA DE CONTROLE DE NOTA *        
+               S'                                                               
+DATA     DFHMDF POS=(1,70),LENGTH=10,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(PROT,NORM)                                                
+*                                                                               
+USERID   DFHMDF POS=(2,1),LENGTH=8,COLOR=GREEN,HILIGHT=UNDERLINE,      *        
+               ATTRB=(PROT,FSET),INITIAL='IBMUSER '                             
+HORA     DFHMDF POS=(2,72),LENGTH=8,COLOR=DEFAULT,HILIGHT=OFF,         *        
+               ATTRB=(PROT,NORM)                                                
+*                                                                               
+         DFHMDF POS=(3,32),LENGTH=25,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='COBOL + CICS + VSAM + BMS'           
+*   AREA DE INPUT                                                               
+         DFHMDF POS=(6,1),LENGTH=29,COLOR=TURQUOISE,HILIGHT=OFF,       *        
+               ATTRB=(ASKIP,NORM),                                     *        
+               INITIAL='INFORME A MATRICULA DO ALUNO'                           
+         DFHMDF POS=(6,31),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,       *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+MATRIC   DFHMDF POS=(6,34),LENGTH=11,COLOR=RED,HILIGHT=UNDERLINE,      *        
+               ATTRB=(UNPROT,NUM,BRT,IC),PICIN='99999999999'                    
+*   AREA DE OUTPUT                                                              
+         DFHMDF POS=(9,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,       *        
+               ATTRB=(ASKIP,NORM),INITIAL='NOME'                                
+         DFHMDF POS=(9,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,       *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+ALUNO    DFHMDF POS=(9,17),LENGTH=40,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(PROT,NORM)                                                
+*                                                                               
+         DFHMDF POS=(10,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='SEXO'                                
+         DFHMDF POS=(10,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+SEXO     DFHMDF POS=(10,17),LENGTH=1,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(PROT,NORM)                                                
+*                                                                               
+         DFHMDF POS=(11,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='NOTA 01'                             
+         DFHMDF POS=(11,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+NOTA01   DFHMDF POS=(11,17),LENGTH=4,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(PROT,NORM),PICIN='99V99'                                  
+*                                                                               
+         DFHMDF POS=(12,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='NOTA 02'                             
+         DFHMDF POS=(12,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+NOTA02   DFHMDF POS=(12,17),LENGTH=4,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(PROT,NORM),PICIN='99V99'                                  
+*                                                                               
+         DFHMDF POS=(13,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='NOTA 03'                             
+         DFHMDF POS=(13,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(PROT,NORM),INITIAL=':'                                    
+NOTA03   DFHMDF POS=(13,17),LENGTH=4,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(ASKIP,NORM),PICIN='99V99'                                 
+*                                                                               
+         DFHMDF POS=(14,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='NOTA 04'                             
+         DFHMDF POS=(14,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+NOTA04   DFHMDF POS=(14,17),LENGTH=4,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(PROT,NORM),PICIN='99V99'                                  
+*                                                                               
+         DFHMDF POS=(15,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='NOTA 05'                             
+         DFHMDF POS=(15,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+NOTA05   DFHMDF POS=(15,17),LENGTH=4,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(PROT,NORM),PICIN='99V99'                                  
+*                                                                               
+         DFHMDF POS=(17,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='MEDIA'                               
+         DFHMDF POS=(17,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+MEDIA    DFHMDF POS=(17,17),LENGTH=4,COLOR=DEFAULT,HILIGHT=OFF,        *        
+               ATTRB=(PROT,NORM),PICIN='99V99'                                  
+*                                                                               
+         DFHMDF POS=(18,1),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='SITUACAO'                            
+         DFHMDF POS=(18,14),LENGTH=1,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL=':'                                   
+SITUACAO DFHMDF POS=(18,17),LENGTH=20,COLOR=DEFAULT,HILIGHT=OFF,       *        
+               ATTRB=(PROT,NORM)                                                
+*   AREA DE RODAPE                                                              
+         DFHMDF POS=(20,1),LENGTH=79,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='----------------------------*        
+               -------------------------------------------------'               
+MSGERRO  DFHMDF POS=(21,01),LENGTH=50,COLOR=DEFAULT,HILIGHT=OFF,       *        
+               ATTRB=(PROT,NORM)                                                
+         DFHMDF POS=(22,1),LENGTH=79,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='----------------------------*        
+               -------------------------------------------------'               
+         DFHMDF POS=(23,1),LENGTH=13,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='[F2] = SALVAR'                       
+         DFHMDF POS=(23,15),LENGTH=10,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='[F3] = FIM'                          
+         DFHMDF POS=(23,27),LENGTH=17,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='[ENTER] = PESQUISE'                  
+         DFHMDF POS=(23,46),LENGTH=20,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='[F5] = CALCULE MEDIA'                
+         DFHMDF POS=(23,68),LENGTH=12,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='[F6] = LIMPE'                        
+*   FINAL DE MAPA                                                               
+         DFHMSD TYPE=FINAL                                                      
+         END                                                                    

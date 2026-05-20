@@ -1,0 +1,47 @@
+*   TIMESTAMP=00000000000000                                                    
+MAPS003  DFHMSD TYPE=&SYSPARM,TIOAPFX=NO                                        
+MAPS003  DFHMDI SIZE=(24,80),COLOR=BLUE,EXTATT=YES                              
+*                                                                               
+         DFHMDF POS=(4,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      NN      N      *        
+                EEEEEE      FFFFFF      EEEEEE'                                 
+*                                                                               
+         DFHMDF POS=(5,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      NN      N      *        
+                EEEEEE      FFFFFF      EEEEEE'                                 
+*                                                                               
+         DFHMDF POS=(6,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='  III        NNN     N      *        
+                EE          FF          EE'                                     
+*                                                                               
+         DFHMDF POS=(7,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='  III        N NNN   N      *        
+                EEEE        FFFF        EEEE  '                                 
+*                                                                               
+         DFHMDF POS=(8,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='  III        N   NN  N      *        
+                EEEE        FFFF        EEEE'                                   
+                                                                                
+         DFHMDF POS=(9,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='  III        N     NNN      *        
+                EE          FF          EE'                                     
+*                                                                               
+         DFHMDF POS=(10,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      N      NN      *        
+                EEEEEE      FF          EEEEEE'                                 
+*                                                                               
+         DFHMDF POS=(11,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      N       N      *        
+                EEEEEE      FF          EEEEEE'                                 
+*                                                                               
+         DFHMDF POS=(13,49),LENGTH=22,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='BY VAGNER R BELLACOSA'               
+*                                                                               
+         DFHMDF POS=(16,26),LENGTH=42,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL=' PRESSIONE    [ENTER]'               
+*                                                                               
+LOGIN    DFHMDF POS=(16,59),LENGTH=3,COLOR=NEUTRAL,HILIGHT=UNDERLINE,  *        
+               ATTRB=(NUM,FSET)                                                 
+*                                                                               
+TELA001        DFHMSD TYPE=FINAL                                                
+               END                                                              

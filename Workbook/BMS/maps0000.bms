@@ -1,0 +1,48 @@
+         TITLE 'MAPS000                         '                               
+         PRINT ON,NOGEN                                                         
+MAPS000  DFHMSD TYPE=MAP,LANG=COBOL,MODE=INOUT,STORAGE=AUTO,SUFFIX=             
+MAP0000  DFHMDI SIZE=(24,80),MAPATTS=(COLOR,HILIGHT),COLUMN=1,LINE=1,  *        
+               DATA=FIELD,TIOAPFX=YES,OBFMT=NO                                  
+* 0000-PROGRAMA                   0000-PROGRAMA                                 
+DFH0001  DFHMDF POS=(1,1),LENGTH=8,ATTRB=(PROT),COLOR=TURQUOISE                 
+         DFHMDF POS=(1,10),LENGTH=1,ATTRB=(PROT,NORM)                           
+         DFHMDF POS=(1,29),LENGTH=20,INITIAL='REGISTRO DE PRESENCA',   *        
+               ATTRB=(PROT,NORM)                                                
+* 0000-DATA                       0000-DATA                                     
+DFH0002  DFHMDF POS=(1,70),LENGTH=10,ATTRB=(PROT),COLOR=TURQUOISE               
+* 0000-TERMINAL                   0000-TERMINAL                                 
+DFH0003  DFHMDF POS=(2,1),LENGTH=8,ATTRB=(PROT),COLOR=TURQUOISE                 
+         DFHMDF POS=(2,10),LENGTH=1,ATTRB=(PROT,NORM)                           
+* 0000-HORA                       0000-HORA                                     
+DFH0004  DFHMDF POS=(2,70),LENGTH=8,ATTRB=(PROT),COLOR=TURQUOISE                
+         DFHMDF POS=(2,79),LENGTH=1,ATTRB=(PROT,NORM)                           
+         DFHMDF POS=(3,1),LENGTH=79,                                   *        
+               INITIAL='-----------------------------------------------*        
+               --------------------------------',ATTRB=(PROT,NORM)              
+         DFHMDF POS=(5,1),LENGTH=8,INITIAL='CURSO  :',ATTRB=(PROT,NORM)         
+* 0000-CURSO                      0000-CURSO                                    
+DFH0005  DFHMDF POS=(5,10),LENGTH=20,ATTRB=(PROT,BRT),COLOR=RED,       *        
+               HILIGHT=BLINK                                                    
+         DFHMDF POS=(5,31),LENGTH=1,ATTRB=(PROT,NORM)                           
+         DFHMDF POS=(7,1),LENGTH=8,INITIAL='USUARIO:',ATTRB=(PROT,NORM)         
+* 0000-USUARIO                    0000-USUARIO                                  
+DFH0006  DFHMDF POS=(7,10),LENGTH=7,ATTRB=(UNPROT,IC,FSET),COLOR=GREEN          
+         DFHMDF POS=(7,18),LENGTH=1,ATTRB=(PROT,NORM)                           
+         DFHMDF POS=(18,1),LENGTH=79,                                  *        
+               INITIAL='-----------------------------------------------*        
+               --------------------------------',ATTRB=(PROT)                   
+* 0000-MSG                        0000-MSG                                      
+DFH0007  DFHMDF POS=(20,1),LENGTH=50,ATTRB=(PROT),COLOR=NEUTRAL                 
+         DFHMDF POS=(20,52),LENGTH=1,ATTRB=(PROT,NORM)                          
+         DFHMDF POS=(22,1),LENGTH=79,                                  *        
+               INITIAL='-----------------------------------------------*        
+               --------------------------------',ATTRB=(PROT)                   
+         DFHMDF POS=(23,1),LENGTH=2,INITIAL='F3',ATTRB=(PROT),         *        
+               COLOR=NEUTRAL                                                    
+         DFHMDF POS=(23,4),LENGTH=7,INITIAL='- FIM |',ATTRB=(PROT,NORM)         
+         DFHMDF POS=(23,12),LENGTH=5,INITIAL='ENTER',ATTRB=(PROT),     *        
+               COLOR=NEUTRAL                                                    
+         DFHMDF POS=(23,18),LENGTH=20,INITIAL='- REGISTRAR PRESENCA',  *        
+               ATTRB=(PROT,NORM)                                                
+         DFHMSD TYPE=FINAL                                                      
+         END                                                                    

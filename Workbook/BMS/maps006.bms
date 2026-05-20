@@ -1,0 +1,70 @@
+         TITLE 'MAPS006                         '                               
+         PRINT ON,NOGEN                                                         
+MAPS006  DFHMSD TYPE=MAP,LANG=COBOL,MODE=INOUT,STORAGE=AUTO,SUFFIX=             
+MAP0000  DFHMDI SIZE=(24,80),MAPATTS=(COLOR,HILIGHT),COLUMN=1,LINE=1,  *        
+               DATA=FIELD,TIOAPFX=YES,OBFMT=NO                                  
+* 0000-PROGRAMA                   0000-PROGRAMA                                 
+PROGRAM  DFHMDF POS=(1,1),LENGTH=8,ATTRB=(PROT),COLOR=TURQUOISE                 
+         DFHMDF POS=(1,10),LENGTH=1,ATTRB=(PROT,NORM)                           
+         DFHMDF POS=(1,29),LENGTH=20,INITIAL='TESTE DE MAPA       ',   *        
+               ATTRB=(PROT,NORM)                                                
+* 0000-DATA                       0000-DATA                                     
+DATASYS  DFHMDF POS=(1,70),LENGTH=10,ATTRB=(PROT),COLOR=TURQUOISE               
+* 0000-TRANSAC                    0000-TERMINAL                                 
+TRANSAC  DFHMDF POS=(2,1),LENGTH=8,ATTRB=(PROT),COLOR=TURQUOISE                 
+         DFHMDF POS=(2,10),LENGTH=1,ATTRB=(PROT,NORM)                           
+* 0000-HORA                       0000-HORA                                     
+HORASYS  DFHMDF POS=(2,70),LENGTH=8,ATTRB=(PROT),COLOR=TURQUOISE                
+         DFHMDF POS=(2,79),LENGTH=1,ATTRB=(PROT,NORM)                           
+         DFHMDF POS=(3,1),LENGTH=79,                                   *        
+               INITIAL='-----------------------------------------------*        
+               --------------------------------',ATTRB=(PROT,NORM)              
+* PRODUTO 001                                                                   
+PROD001  DFHMDF POS=(4,1),LENGTH=10,ATTRB=(PROT),                      *        
+               COLOR=TURQUOISE                                                  
+         DFHMDF POS=(4,12),LENGTH=20,ATTRB=(PROT,NORM),                *        
+               INITIAL='LANCHES E CIA'                                          
+QTDPRD1  DFHMDF POS=(4,33),LENGTH=6,ATTRB=(UNPROT)                              
+* PRODUTO 002                                                                   
+PROD002  DFHMDF POS=(5,1),LENGTH=10,ATTRB=(PROT),                      *        
+               COLOR=TURQUOISE                                                  
+         DFHMDF POS=(5,12),LENGTH=20,ATTRB=(PROT,NORM),                *        
+               INITIAL='FRUTAS E CIA'                                           
+QTDPRD2  DFHMDF POS=(5,33),LENGTH=6,ATTRB=(UNPROT)                              
+* PRODUTO 003                                                                   
+PROD003  DFHMDF POS=(6,1),LENGTH=10,ATTRB=(PROT),                      *        
+               COLOR=TURQUOISE                                                  
+         DFHMDF POS=(6,12),LENGTH=20,ATTRB=(PROT,NORM),                *        
+               INITIAL='LEGUMES E CIA'                                          
+QTDPRD3  DFHMDF POS=(6,33),LENGTH=6,ATTRB=(UNPROT)                              
+* PRODUTO 004                                                                   
+PROD004  DFHMDF POS=(7,1),LENGTH=10,ATTRB=(PROT),                      *        
+               COLOR=TURQUOISE                                                  
+         DFHMDF POS=(7,12),LENGTH=20,ATTRB=(PROT,NORM),                *        
+               INITIAL='VERDURAS E CIA'                                         
+QTDPRD4  DFHMDF POS=(7,33),LENGTH=6,ATTRB=(UNPROT)                              
+* PRODUTO 005                                                                   
+PROD005  DFHMDF POS=(8,1),LENGTH=10,ATTRB=(PROT),                      *        
+               COLOR=TURQUOISE                                                  
+         DFHMDF POS=(8,12),LENGTH=20,ATTRB=(PROT,NORM),                *        
+               INITIAL='MALUCO E CIA'                                           
+QTDPRD5  DFHMDF POS=(8,33),LENGTH=6,ATTRB=(UNPROT)                              
+******************** TRAILLER                                                   
+         DFHMDF POS=(19,1),LENGTH=79,                                  *        
+               INITIAL='-----------------------------------------------*        
+               --------------------------------',ATTRB=(PROT)                   
+* 0000-MSG                        0000-MSG                                      
+DFH0007  DFHMDF POS=(20,1),LENGTH=50,ATTRB=(PROT),COLOR=NEUTRAL                 
+         DFHMDF POS=(20,52),LENGTH=1,ATTRB=(PROT,NORM)                          
+         DFHMDF POS=(22,1),LENGTH=79,                                  *        
+               INITIAL='-----------------------------------------------*        
+               --------------------------------',ATTRB=(PROT)                   
+         DFHMDF POS=(23,1),LENGTH=2,INITIAL='F3',ATTRB=(PROT),         *        
+               COLOR=NEUTRAL                                                    
+         DFHMDF POS=(23,4),LENGTH=7,INITIAL='- FIM |',ATTRB=(PROT,NORM)         
+         DFHMDF POS=(23,12),LENGTH=5,INITIAL='ENTER',ATTRB=(PROT),     *        
+               COLOR=NEUTRAL                                                    
+         DFHMDF POS=(23,18),LENGTH=20,INITIAL='- REGISTRAR PRESENCA',  *        
+               ATTRB=(PROT,NORM)                                                
+         DFHMSD TYPE=FINAL                                                      
+         END                                                                    

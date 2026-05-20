@@ -1,0 +1,52 @@
+*   TIMESTAMP=00000000000000                                                    
+         PRINT ON,NOGEN                                                         
+MAPS003  DFHMSD TYPE=MAP,LANG=COBOL,MODE=INOUT,STORAGE=AUTO,SUFFIX=             
+MAPS003  DFHMDI SIZE=(24,80),COLOR=BLUE,EXTATT=YES,COLUMN=1,LINE=1,    *        
+               DATA=FIELD,TIOAPFX=YES,OBFMT=NO                          00000040
+*                                                                               
+         DFHMDF POS=(5,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      NN      N      *        
+               EEEEEE      FFFFFF      EEEEEE'                                  
+*                                                                               
+         DFHMDF POS=(6,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      NN      N      *        
+               EEEEEE      FFFFFF      EEEEEE'                                  
+*                                                                               
+         DFHMDF POS=(7,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='  III        NNN     N      *        
+               EE          FF          EE'                                      
+*                                                                               
+         DFHMDF POS=(8,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='  III        N NNN   N      *        
+               EEEE        FFFF        EEEE  '                                  
+*                                                                               
+         DFHMDF POS=(9,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,      *        
+               ATTRB=(ASKIP,NORM),INITIAL='  III        N   NN  N      *        
+               EEEE        FFFF        EEEE'                                    
+                                                                                
+         DFHMDF POS=(10,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='  III        N     NNN      *        
+               EE          FF          EE'                                      
+*                                                                               
+         DFHMDF POS=(11,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      N      NN      *        
+               EEEEEE      FF          EEEEEE'                                  
+*                                                                               
+         DFHMDF POS=(12,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      N       N      *        
+               EEEEEE      FF          EEEEEE'                                  
+*                                                                               
+         DFHMDF POS=(15,49),LENGTH=22,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL='BY VAGNER R BELLACOSA'               
+*                                                                               
+         DFHMDF POS=(17,26),LENGTH=42,COLOR=TURQUOISE,HILIGHT=OFF,     *        
+               ATTRB=(ASKIP,NORM),INITIAL=' PRESSIONE    [ENTER]'               
+*                                                                               
+LOGIN    DFHMDF POS=(17,59),LENGTH=3,COLOR=NEUTRAL,HILIGHT=UNDERLINE,  *        
+               ATTRB=(UNPROT,NUM,BRT,IC),PICIN='999'                            
+*                                                                               
+MSGERRO  DFHMDF POS=(21,01),LENGTH=50,COLOR=DEFAULT,HILIGHT=OFF,       *        
+               ATTRB=(PROT,NORM)                                                
+*                                                                               
+MAPS003        DFHMSD TYPE=FINAL                                                
+               END                                                              

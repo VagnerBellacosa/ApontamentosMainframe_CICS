@@ -1,0 +1,33 @@
+*   TIMESTAMP=00000000000000                                                    
+SWBVRB1  DFHMSD TYPE=&SYSPARM,TIOAPFX=NO                                        
+SWBVRB1  DFHMDI SIZE=(24,80),COLOR=BLUE,EXTATT=YES                              
+         DFHMDF POS=(4,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF       C        
+               ,ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      NN      N     C        
+                  EEEEEE     FFFFFF     EEEEEE'                                 
+         DFHMDF POS=(5,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF       C        
+               ,ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      NN      N     C        
+                  EEEEEE     FFFFFF     EEEEEE'                                 
+         DFHMDF POS=(6,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF       C        
+               ,ATTRB=(ASKIP,NORM),INITIAL='  III        NNN     N     C        
+                EE             FF             E'                                
+         DFHMDF POS=(7,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF       C        
+               ,ATTRB=(ASKIP,NORM),INITIAL='  III        N NNN   N    EC        
+               EEE         FFFF         EEEE  '                                 
+         DFHMDF POS=(8,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF       C        
+               ,ATTRB=(ASKIP,NORM),INITIAL='  III        N   NN  N     C        
+                EEEE         FFFF         EEEE'                                 
+         DFHMDF POS=(9,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF       C        
+               ,ATTRB=(ASKIP,NORM),INITIAL='  III        N     NNN     C        
+                EE             FF             E'                                
+         DFHMDF POS=(10,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF      C        
+               ,ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      N      NN     C        
+                  EEEEEE     FF             EE'                                 
+         DFHMDF POS=(11,11),LENGTH=59,COLOR=TURQUOISE,HILIGHT=OFF      C        
+               ,ATTRB=(ASKIP,NORM),INITIAL='IIIIIII      N       N     C        
+                  EEEEEE     FF             EE'                                 
+         DFHMDF POS=(16,16),LENGTH=42,COLOR=TURQUOISE,HILIGHT=OFF      C        
+               ,ATTRB=(ASKIP,NORM),INITIAL=' PRESSIONE    [ ENTER ]  '          
+LOGIN    DFHMDF POS=(16,59),LENGTH=3,COLOR=NEUTRAL,HILIGHT=UNDERLINE   C        
+               ,ATTRB=(NUM,FSET)                                                
+SWBVRB1        DFHMSD TYPE=FINAL                                                
+               END                                                              
